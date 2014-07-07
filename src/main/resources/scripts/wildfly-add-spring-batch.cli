@@ -1,0 +1,9 @@
+# Connect to Wildfly instance
+connect
+
+# Create Spring Batch Module
+# If the module already exists, Wildfly will output a message saying that the module already exists and the script exits.
+module add \
+    --name=org.springframework.batch \
+    --dependencies=javax.api,javaee.api \
+    --resources=${wildfly.module.classpath}

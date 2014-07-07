@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jboss-deployment-structure>
+    <deployment>
+        <exclusions>
+            <module name="org.wildfly.jberet"/>
+            <module name="org.jberet.jberet-core"/>
+        </exclusions>
+
+        <dependencies>
+            <module name="org.springframework.batch" services="import" meta-inf="import"/>
+        </dependencies>
+    </deployment>
+</jboss-deployment-structure>
