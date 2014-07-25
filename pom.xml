@@ -25,6 +25,7 @@
         <version.plugin.dependency>2.8</version.plugin.dependency>
         <version.plugin.war>2.4</version.plugin.war>
         <version.plugin.wildfly>1.0.1.Final</version.plugin.wildfly>
+        <version.plugin.jgitflow>1.0-m3</version.plugin.jgitflow>
 
         <!-- Dependencies -->
         <wildfly.version>8.0.0.Final</wildfly.version>
@@ -143,6 +144,15 @@
                             <script>target/scripts/${cli.file}</script>
                         </scripts>
                     </executeCommands>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>external.atlassian.jgitflow</groupId>
+                <artifactId>jgitflow-maven-plugin</artifactId>
+                <version>${version.plugin.jgitflow}</version>
+                <configuration>
+                    <noDeploy>true</noDeploy>
                 </configuration>
             </plugin>
         </plugins>
