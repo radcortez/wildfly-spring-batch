@@ -14,3 +14,6 @@
 
 * To remove Spring Batch from your Wildfly instance, have Wildfly running and execute `mvn wildfly:execute-commands -P remove-spring-batch`
 
+## Resources ##
+
+* [Spring Batch as Wildfly Module](http://www.radcortez.com/spring-batch-as-wildfly-module/)
