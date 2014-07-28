@@ -3,7 +3,7 @@
 
     <groupId>com.cortez.wildfly.batch</groupId>
     <artifactId>wildfly-spring-batch</artifactId>
-    <version>1.0</version>
+    <version>1.1-SNAPSHOT</version>
     <packaging>war</packaging>
 
     <name>wildfly-spring-batch</name>
@@ -88,7 +88,7 @@
                         </goals>
                         <configuration>
                             <outputProperty>wildfly.module.classpath</outputProperty>
-                            <!--pathSeparator>:</pathSeparator-->
+                            <pathSeparator>:</pathSeparator>
                             <excludeGroupIds>javax</excludeGroupIds>
                             <excludeScope>test</excludeScope>
                             <includeScope>provided</includeScope>
