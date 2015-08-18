@@ -88,7 +88,7 @@
                         </goals>
                         <configuration>
                             <outputProperty>wildfly.module.classpath</outputProperty>
-                            <pathSeparator>:</pathSeparator>
+                            <!--pathSeparator>:</pathSeparator-->
                             <excludeGroupIds>javax</excludeGroupIds>
                             <excludeScope>test</excludeScope>
                             <includeScope>provided</includeScope>
