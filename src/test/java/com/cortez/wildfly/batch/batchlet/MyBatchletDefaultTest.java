@@ -47,8 +47,9 @@ public class MyBatchletDefaultTest {
     public void testBatchletProcess() throws Exception {
         JobOperator jobOperator = BatchRuntime.getJobOperator();
         Long executionId = jobOperator.start("batchlet-job", new Properties());
+        JobExecution jobExecution = jobOperator.getJobExecution(executionId);
 
-        JobExecution jobExecution = keepTestAlive(jobOperator, executionId);
+        keepTestAlive(jobExecution);
 
         assertEquals(BatchStatus.COMPLETED, jobExecution.getBatchStatus());
     }
