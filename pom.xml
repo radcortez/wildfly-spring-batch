@@ -3,7 +3,7 @@
 
     <groupId>com.cortez.wildfly.batch</groupId>
     <artifactId>wildfly-spring-batch</artifactId>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.1</version>
     <packaging>war</packaging>
 
     <name>wildfly-spring-batch</name>
