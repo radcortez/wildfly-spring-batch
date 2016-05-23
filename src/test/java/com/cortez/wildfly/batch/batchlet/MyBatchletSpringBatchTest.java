@@ -48,9 +48,11 @@ public class MyBatchletSpringBatchTest {
     public void testBatchletProcess() throws Exception {
         JobOperator jobOperator = BatchRuntime.getJobOperator();
         Long executionId = jobOperator.start("batchlet-job", new Properties());
+        JobExecution jobExecution = jobOperator.getJobExecution(executionId);
 
-        JobExecution jobExecution = keepTestAlive(jobOperator, executionId);
+        keepTestAlive(jobExecution);
 
-        assertEquals(BatchStatus.COMPLETED, jobExecution.getBatchStatus());
+        // Spring Batch does not update JobExecution with updated data. We need to query it again.
+        assertEquals(BatchStatus.COMPLETED, jobOperator.getJobExecution(executionId).getBatchStatus());
     }
 }

@@ -5,6 +5,11 @@
             <module name="org.wildfly.jberet"/>
             <module name="org.jberet.jberet-core"/>
         </exclusions>
+        <!-- With WildFly 10, Spring batch 3.0.7 I needed to explicitly exclude whole jberet subsystem,
+        otherwise two JSR 352 providers are loaded and they clash -->
+        <exclude-subsystems>
+            <subsystem name="batch-jberet"/>
+        </exclude-subsystems>
 
         <dependencies>
             <module name="org.springframework.batch" services="import" meta-inf="import"/>
